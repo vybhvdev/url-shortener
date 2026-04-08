@@ -1,4 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>URL Shortener</title><link rel="stylesheet" href="style.css"><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script></head>
-<body><div class="container"><header><h1>🔗 URL Shortener</h1><p>Shorten links and track every click</p></header><div class="card"><h2>Create New Short Link</h2><div class="form-group"><input type="url" id="longUrlInput" placeholder="https://example.com/long/url"><button id="shortenBtn">Shorten</button></div><div id="resultMessage" class="message"></div></div><div class="card"><h2>📊 Your Links</h2><div id="linksList"><div class="loading">Loading...</div></div></div></div><div id="statsModal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="modalContent"><h2>Analytics</h2><div class="loading">Loading stats...</div></div></div></div><script src="script.js"></script></body></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>URL Shortener | Modern Link Tracking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">X</div>
+            <h1>Shorten Your Reach</h1>
+            <p>High-performance link management and real-time analytics.</p>
+        </header>
+        
+        <div class="card main-card">
+            <h2>Create New Link</h2>
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"></path></svg>
+                    <input type="url" id="longUrlInput" placeholder="Paste your long URL here...">
+                </div>
+                <button id="shortenBtn">Generate Link</button>
+            </div>
+            <div id="resultMessage" class="message"></div>
+        </div>
+
+        <div class="section-header">
+            <h2>Your Dashboard</h2>
+            <span class="badge" id="linkCount">0 Links</span>
+        </div>
+
+        <div class="card overflow-card">
+            <div id="linksList">
+                <div class="loading">Initialising dashboard...</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="statsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Analytics Overview</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div id="modalContent">
+                <div class="loading">Loading real-time stats...</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
